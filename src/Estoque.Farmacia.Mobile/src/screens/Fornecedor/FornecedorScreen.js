@@ -8,7 +8,7 @@ const FornecedorScreen = ({ navigation }) => {
   const [fornecedores, setFornecedores] = useState([]);
   const [initialFornecedores, setInitialFornecedores] = useState([]);
   const [searchFornecedores, setSearchFornecedores] = useState('');
-  const apiUrl = 'https://localhost:7208/api/Fornecedores';
+  const apiUrl = 'http://100.28.74.101:8080/api/Fornecedores';
 
   useFocusEffect(
     React.useCallback(() => {
@@ -51,7 +51,7 @@ const FornecedorScreen = ({ navigation }) => {
       return;
     }
 
-    axios.delete(`https://localhost:7208/api/Fornecedores/${id}`)
+    axios.delete(`http://100.28.74.101:8080/api/Fornecedores/${id}`)
       .then(() => {
         Alert.alert('Fornecedor deletado com sucesso!');
         fetchFornecedores();

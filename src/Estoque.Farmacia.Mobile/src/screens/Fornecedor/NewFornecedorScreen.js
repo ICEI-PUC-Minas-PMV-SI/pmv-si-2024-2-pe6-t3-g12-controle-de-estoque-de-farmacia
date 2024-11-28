@@ -20,7 +20,7 @@ const NewFornecedorScreen = ({ navigation }) => {
     }
 
     axios
-      .post('https://localhost:7208/api/Fornecedores', {
+      .post('http://100.28.74.101:8080/api/Fornecedores', {
         nomeFantasia,
         cnpj,
         telefone,
