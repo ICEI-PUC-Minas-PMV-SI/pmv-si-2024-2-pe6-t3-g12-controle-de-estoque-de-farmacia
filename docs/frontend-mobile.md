@@ -246,13 +246,43 @@ Essas etapas asseguram que a aplicação esteja corretamente implantada e pronta
 
 ## Testes
 
-[Descreva a estratégia de teste, incluindo os tipos de teste a serem realizados (unitários, integração, carga, etc.) e as ferramentas a serem utilizadas.]
+### Lotes
 
-1. Crie casos de teste para cobrir todos os requisitos funcionais e não funcionais da aplicação.
-2. Implemente testes unitários para testar unidades individuais de código, como funções e classes.
-3. Realize testes de integração para verificar a interação correta entre os componentes da aplicação.
-4. Execute testes de carga para avaliar o desempenho da aplicação sob carga significativa.
-5. Utilize ferramentas de teste adequadas, como frameworks de teste e ferramentas de automação de teste, para agilizar o processo de teste.
+Os testes relacionados ao fluxo dos Lotes abrangem as ações de listagem, filtragem, remoção, edição e registro e tem o intuito de cobrir e comprovar o funcionamento de tais funcionalidades.
+
+#### Listagem de Lotes
+
+A página de listagem de Lotes deve fazer uma requisição do tipo GET para a API usando o endpoint "/api/Lotes", o qual deverá retornar uma lista de Lotes que serão listados na página exibindo: ID do lote, Nome do medicamento, Data de validade do lote, Imagem do medicamento e botões de ação para editar ou deletar o Lote.
+
+![image](https://github.com/user-attachments/assets/aa7a0053-94e4-47c1-9366-b18d74cf83b3)
+
+#### Deletar um Lote
+
+Na página de listagem de Lotes cada Lote possui um botão de ação para deletá-lo, tão botão deve disparar uma requisição do tipo DELETE para o endpoint "/api/Lotes/<id-do-lote>" que deverá deletar um lote a partir de seu ID e caso a requisição seja bem sucedida, a listagem deve ser atualizada fazendo uma nova requisição de Lotes cadastrados.
+
+![image](https://github.com/user-attachments/assets/4284af5f-35b6-4055-a3cd-23550b8d33c0)
+
+#### Filtrar listagem de Lotes
+
+A filtragem de Lotes permite somente a pesquisa pelos parâmetros: ID do Lote e Nome do medicamento. Após o usuário digitar um desses parâmetros no campo de pesquisa, o sistema deve filtrar os Lotes que se enquadrem em tais requisitos. A filtragem não realiza o disparo de nenhuma requisição HTTP.
+
+![image](https://github.com/user-attachments/assets/3aee3d85-f904-4308-96f4-708ddda953e1)
+
+#### Edição de Lote
+
+Ao acessar a página de Edição de Lote pelo botão de ação de edição na página de listagem, uma requisição de busca do tipo GET no endpoint "/api/Lotes/<id-do-lote>" deve ser feita, a qual retornará os dados do Lote e com eles preencherá o formulário de edição. Caso alguma mudança seja feita em qualquer um dos campos de edição, os quais são: Quantidade, Data de Fabricação e Data de Validade, o botão de submissão do formulário deverá ser habilitado permitindo o salvamento do Lote. Ao salvar o Lote uma requisição do tipo PUT deverá ser feita para o endpoint "/api/Lotes/<id-do-lote>" o qual salvará os dados do Lote. Caso a requisição seja bem sucedida, uma nova requisição do tipo GET deverá ser feita para o endpoint "/api/Lotes" o qual retornará a listagem atualidade de Lotes para a página de listagem.
+
+![image](https://github.com/user-attachments/assets/95afb500-0b42-480b-82df-1467197ff484)
+![image](https://github.com/user-attachments/assets/4c8c14c2-ad8b-4c21-bcfd-60d16a709018)
+
+#### Cadastro de Lote
+
+A página de registro deve ser acessada a partir da página de Listagem e após o usuário preencher os campos obrigatórios: Quantidade, Data de Fabricação, Data de validade e os campos não obrigatórios: Medicamento, o botão de cadastro deve ser habilitado, ao clicar no botão uma requisição do tipo POST deverá ser feita para o endpoint "/api/Lotes" com os dados do novo Lote realizando seu registro, caso a requisição seja bem sucedida uma nova requisição do tipo GET deverá ser feita para o endpoint "/api/Lotes" qua retornará a lista de Lotes atualizada para a página de listagem.
+
+![image](https://github.com/user-attachments/assets/ecdd89c5-c525-4ec7-af36-ce32fde5ad7f)
+![image](https://github.com/user-attachments/assets/443c38ac-8ce6-4e80-a050-bd10b761a014)
+
+
 # Referências
 
 Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
