@@ -92,7 +92,7 @@ O design da interface é moderno e funcional, com uma paleta de cores em tons az
 
 ### Design Visual
 
-![print 3](https://github.com/user-attachments/assets/dba3c802-4437-4854-9c56-da5b6b68ff59)
+![Estoque de farmácia1](https://github.com/user-attachments/assets/2db073b0-7f64-455d-81c7-b61ad6786f9d)
 
 ![print2](https://github.com/user-attachments/assets/c59a312e-a24c-4675-8cf1-eb4a2d226ad0)
 
@@ -100,7 +100,7 @@ O design da interface é moderno e funcional, com uma paleta de cores em tons az
 
 ![1](https://github.com/user-attachments/assets/0184aec6-cf6a-4620-9b16-78a49a5fd9b4)
 
-![2](https://github.com/user-attachments/assets/22709074-0ce4-4e22-b1b6-b03342c6352e)
+![criarconta](https://github.com/user-attachments/assets/c4f43978-e448-450c-8a06-0081a9c9a599)
 
 ![3](https://github.com/user-attachments/assets/962a5d27-b846-4cb2-8ed5-d680ce532bb6)
 
