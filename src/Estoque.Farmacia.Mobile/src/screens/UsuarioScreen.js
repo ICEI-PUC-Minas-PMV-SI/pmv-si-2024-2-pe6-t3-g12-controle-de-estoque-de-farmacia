@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Alert, Image } from 'react-native';
 import { Button, TextInput } from 'react-native-paper';
 import axios from 'axios';
 
@@ -24,56 +24,90 @@ const UsuarioScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Entrar</Text>
+      <View style={styles.logoContainer}>
+        <Image
+          source={require('../img/logo1.png')}
+          style={styles.logo}
+        />
+      </View>
 
-      <TextInput
-        mode="outlined"
-        label="Nome do usuário"
-        value={usuarioLogin}
-        onChangeText={setUsuarioLogin}
-        outlineColor='#583FFF'
-        outlineStyle={{
-          borderWidth: 3,
-          borderRadius: 25,
-        }}
-        style={styles.input}
-      />
-      <TextInput
-        mode="outlined"
-        label="Senha"
-        value={senhaLogin}
-        onChangeText={setSenhaLogin}
-        secureTextEntry
-        outlineColor='#583FFF'
-        outlineStyle={{
-          borderWidth: 3,
-          borderRadius: 25,
-        }}
-        style={styles.input}
-      />
+      <View style={styles.enterSection}>
+        <Text style={styles.title}>Entrar</Text>
 
-      <Button
-        mode="contained"
-        style={styles.button}
-        onPress={autenticarUsuario}
-        contentStyle={{ padding: 8 }}
-      >
-        ENTRAR
-      </Button>
+        <TextInput
+          mode="outlined"
+          label="Nome do usuário"
+          value={usuarioLogin}
+          onChangeText={setUsuarioLogin}
+          outlineColor='#583FFF'
+          outlineStyle={styles.inputOutline}
+          style={styles.input}
+        />
+        <TextInput
+          mode="outlined"
+          label="Senha"
+          value={senhaLogin}
+          onChangeText={setSenhaLogin}
+          secureTextEntry
+          outlineColor='#583FFF'
+          outlineStyle={styles.inputOutline}
+          style={styles.input}
+        />
 
-      <TouchableOpacity onPress={() => navigation.navigate('Cadastro')}>
-        <Text style={styles.createAccount}>Criar Conta</Text>
-      </TouchableOpacity>
+        <View style={styles.forgotPasswordSection}>
+          <TouchableOpacity onPress={() => navigation.navigate('Cadastro')}>
+            <Text style={styles.forgotPassword}>Esqueceu a senha?</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Cadastro')}>
+            <Text style={styles.forgotPasswordLink}>Esqueci a Senha</Text>
+          </TouchableOpacity>
+        </View>
+
+        <Button
+          mode="contained"
+          style={styles.button}
+          onPress={autenticarUsuario}
+          contentStyle={{ padding: 8 }}
+        >
+          ENTRAR
+        </Button>
+
+        <View style={styles.createAccountSection}>
+          <Text style={styles.createAccountText}>Não tem uma conta?</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('Cadastro')}>
+            <Text style={styles.createAccountLink}>Criar Conta</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    width: 393,
+    height: 852,
+    backgroundColor: '#FFFFFF',
+  },
+  logoContainer: {
+    width: 393,
+    height: 207,
+    backgroundColor: '#E2E7FF',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    top: 0,
+  },
+  logo: {
+    width: 292,
+    height: 126,
+    marginTop: 76,
+  },
+  enterSection: {
     flex: 1,
-    padding: 16,
-    backgroundColor: '#FFF',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 207,
   },
   title: {
     fontFamily: 'Comfortaa',
@@ -84,24 +118,74 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     color: '#583FFF',
     marginBottom: 16,
-    alignSelf: 'flex-start',
-    marginLeft: '10%'
   },
   input: {
-    width: '80%',
+    width: 309,
+    height: 37,
     marginBottom: 16,
-    alignSelf: 'center'
+    alignSelf: 'center',
+  },
+  inputOutline: {
+    borderWidth: 2,
+    borderRadius: 15,
+  },
+  forgotPasswordSection: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  forgotPassword: {
+    fontFamily: 'Comfortaa',
+    fontSize: 10,
+    fontWeight: '400',
+    lineHeight: 11.15,
+    letterSpacing: -0.015,
+    textAlign: 'left',
+    color: '#00000080',
+  },
+  forgotPasswordLink: {
+    fontFamily: 'Comfortaa',
+    fontSize: 10,
+    fontWeight: '400',
+    lineHeight: 11.15,
+    letterSpacing: -0.015,
+    textAlign: 'left',
+    color: '#583FFF',
+    marginLeft: 8,
+    textDecorationLine: 'underline',
+    textShadowColor: '#00000040',
+    textShadowOffset: { width: 0, height: 4 },
+    textShadowRadius: 4,
   },
   button: {
-    width: '80%',
+    width: 309,
+    height: 37,
     backgroundColor: '#583FFF',
+    justifyContent: 'center',
+    alignItems: 'center',
     marginVertical: 16,
-    alignSelf: 'center'
+    borderRadius: 15,
   },
-  createAccount: {
-    color: '#6A5ACD',
+  createAccountSection: {
+    alignItems: 'center',
     marginTop: 16,
-    alignSelf: 'center'
+  },
+  createAccountText: {
+    fontFamily: 'Comfortaa',
+    fontSize: 11,
+    fontWeight: '400',
+    color: '#00000080',
+    textAlign: 'left',
+    textDecorationLine: 'underline',
+  },
+  createAccountLink: {
+    fontFamily: 'Comfortaa',
+    fontSize: 11,
+    fontWeight: '400',
+    color: '#583FFF',
+    textAlign: 'left',
+    textDecorationLine: 'underline',
+    marginTop: 8,
   },
 });
 

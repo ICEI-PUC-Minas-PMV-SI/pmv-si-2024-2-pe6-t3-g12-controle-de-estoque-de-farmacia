@@ -211,7 +211,7 @@ Essas medidas visam garantir a integridade e a segurança da aplicação e dos d
 Para implantar a aplicação de controle de estoque em um ambiente de produção, siga estas etapas:
 
 1. **Requisitos de Hardware e Software**:
-   - **Hardware**: 
+   - **Hardware**:
      - CPU: Mínimo de 2 núcleos.
      - RAM: Pelo menos 4 GB.
      - Espaço em disco: Mínimo de 20 GB disponíveis.
@@ -287,6 +287,17 @@ A página de registro deve ser acessada a partir da página de Listagem e após 
 ![image](https://github.com/user-attachments/assets/ecdd89c5-c525-4ec7-af36-ce32fde5ad7f)
 ![image](https://github.com/user-attachments/assets/443c38ac-8ce6-4e80-a050-bd10b761a014)
 
+#### Cadastro de Usuário
+
+Ao fornecer um nome de usuário e senha válidos, a API retorna um código de resposta 201, indicando que a criação do usuário foi bem-sucedida, e o usuário deve ser redirecionado para a página de "Login".
+
+![Teste_Cadastro_Usuario](./img/mobile_criar_usuario.png)
+
+#### Autenticar Usuário
+
+Ao fornecer credenciais válidas (nome de usuário e senha), a API retorna um código de resposta 200, indicando que a autenticação foi bem-sucedida, e o usuário deve ser redirecionado para a página "Home".
+
+![Teste_Autenticar_Usuario](./img/mobile_autenticar_usuario.png)
 
 # Referências
 

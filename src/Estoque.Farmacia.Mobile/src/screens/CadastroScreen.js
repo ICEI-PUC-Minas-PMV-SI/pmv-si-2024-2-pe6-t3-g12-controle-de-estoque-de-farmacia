@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Alert } from 'react-native';
+import { View, Text, StyleSheet, Alert, Image } from 'react-native';
 import { Button, TextInput } from 'react-native-paper';
 import axios from 'axios';
 
@@ -24,52 +24,74 @@ const CadastroScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Criar Conta</Text>
+      <View style={styles.logoContainer}>
+        <Image
+          source={require('../img/logo1.png')}
+          style={styles.logo}
+        />
+      </View>
 
-      <TextInput
-        mode="outlined"
-        label="Nome"
-        value={nomeUsuario}
-        onChangeText={setNomeUsuario}
-        outlineColor='#583FFF'
-        outlineStyle={{
-          borderWidth: 3,
-          borderRadius: 25,
-        }}
-        style={styles.input}
-      />
-      <TextInput
-        mode="outlined"
-        label="Senha"
-        value={senha}
-        onChangeText={setSenha}
-        secureTextEntry
-        outlineColor='#583FFF'
-        outlineStyle={{
-          borderWidth: 3,
-          borderRadius: 25,
-        }}
-        style={styles.input}
-      />
+      <View style={styles.enterSection}>
+        <Text style={styles.title}>Criar Conta</Text>
 
-      <Button
-        mode="contained"
-        style={styles.button}
-        onPress={criarUsuario}
-        contentStyle={{ padding: 8 }}
-      >
-        CRIAR
-      </Button>
+        <TextInput
+          mode="outlined"
+          label="Nome"
+          value={nomeUsuario}
+          onChangeText={setNomeUsuario}
+          outlineColor='#583FFF'
+          outlineStyle={styles.inputOutline}
+          style={styles.input}
+        />
+        <TextInput
+          mode="outlined"
+          label="Senha"
+          value={senha}
+          onChangeText={setSenha}
+          secureTextEntry
+          outlineColor='#583FFF'
+          outlineStyle={styles.inputOutline}
+          style={styles.input}
+        />
+
+        <Button
+          mode="contained"
+          style={styles.button}
+          onPress={criarUsuario}
+          contentStyle={{ padding: 8 }}
+        >
+          CRIAR
+        </Button>
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    width: 393,
+    height: 852,
+    backgroundColor: '#FFFFFF',
+  },
+  logoContainer: {
+    width: 393,
+    height: 207,
+    backgroundColor: '#E2E7FF',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    top: 0,
+  },
+  logo: {
+    width: 292,
+    height: 126,
+    marginTop: 76,
+  },
+  enterSection: {
     flex: 1,
-    padding: 16,
-    backgroundColor: '#FFF',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 207,
   },
   title: {
     fontFamily: 'Comfortaa',
@@ -80,19 +102,25 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     color: '#583FFF',
     marginBottom: 16,
-    alignSelf: 'flex-start',
-    marginLeft: '10%'
   },
   input: {
-    width: '80%',
+    width: 309,
+    height: 37,
     marginBottom: 16,
-    alignSelf: 'center'
+    alignSelf: 'center',
+  },
+  inputOutline: {
+    borderWidth: 2,
+    borderRadius: 15,
   },
   button: {
-    width: '80%',
+    width: 309,
+    height: 37,
     backgroundColor: '#583FFF',
+    justifyContent: 'center',
+    alignItems: 'center',
     marginVertical: 16,
-    alignSelf: 'center'
+    borderRadius: 15,
   },
 });
 
