@@ -257,35 +257,37 @@ Os testes relacionados ao fluxo dos Lotes abrangem as ações de listagem, filtr
 
 #### Listagem de Lotes
 
-A página de listagem de Lotes deve fazer uma requisição do tipo GET para a API usando o endpoint "/api/Lotes", o qual deverá retornar uma lista de Lotes que serão listados na página exibindo: ID do lote, Nome do medicamento, Data de validade do lote, Imagem do medicamento e botões de ação para editar ou deletar o Lote.
+A página de listagem de lotes deve expor no topo o botão de Cadastrar ao lado do título, o campo de busca abaixo do Título para filtrar a listagem e a lista de lotes abaixo do campo de busca. Cada item da listagem possui a seguinte estrutura: Id do lote, Nome do medicamento, Data de validade, Botão de edição e Botão de deletar.
 
-![image](https://github.com/user-attachments/assets/aa7a0053-94e4-47c1-9366-b18d74cf83b3)
+Ao clicar no campo de buscar e digitar algum texto a listagem deverá ser filtrada, os campos que deverão set considerados para filtro são: Id do lote e Nome do medicamento.
 
-#### Deletar um Lote
+Ao clicar no Botão de edição o usuário deverá ser redirecionado para página de edição, ao clicar no Botão de deletar o lote deve ser removido da listagem permanentemente.
 
-Na página de listagem de Lotes cada Lote possui um botão de ação para deletá-lo, tão botão deve disparar uma requisição do tipo DELETE para o endpoint "/api/Lotes/<id-do-lote>" que deverá deletar um lote a partir de seu ID e caso a requisição seja bem sucedida, a listagem deve ser atualizada fazendo uma nova requisição de Lotes cadastrados.
-
-![image](https://github.com/user-attachments/assets/4284af5f-35b6-4055-a3cd-23550b8d33c0)
-
-#### Filtrar listagem de Lotes
-
-A filtragem de Lotes permite somente a pesquisa pelos parâmetros: ID do Lote e Nome do medicamento. Após o usuário digitar um desses parâmetros no campo de pesquisa, o sistema deve filtrar os Lotes que se enquadrem em tais requisitos. A filtragem não realiza o disparo de nenhuma requisição HTTP.
-
-![image](https://github.com/user-attachments/assets/3aee3d85-f904-4308-96f4-708ddda953e1)
+![image](https://github.com/user-attachments/assets/2709baa3-5709-41b5-a8f0-e5d7c489cfba)
+![image](https://github.com/user-attachments/assets/47496caf-3848-42e7-8a70-f3efa9a69884)
+![image](https://github.com/user-attachments/assets/4987bbae-4c89-424c-bbe5-ef2c1e980de4)
+![image](https://github.com/user-attachments/assets/6c2e1c78-ca89-4781-ac51-c2330b2666e7)
 
 #### Edição de Lote
 
-Ao acessar a página de Edição de Lote pelo botão de ação de edição na página de listagem, uma requisição de busca do tipo GET no endpoint "/api/Lotes/<id-do-lote>" deve ser feita, a qual retornará os dados do Lote e com eles preencherá o formulário de edição. Caso alguma mudança seja feita em qualquer um dos campos de edição, os quais são: Quantidade, Data de Fabricação e Data de Validade, o botão de submissão do formulário deverá ser habilitado permitindo o salvamento do Lote. Ao salvar o Lote uma requisição do tipo PUT deverá ser feita para o endpoint "/api/Lotes/<id-do-lote>" o qual salvará os dados do Lote. Caso a requisição seja bem sucedida, uma nova requisição do tipo GET deverá ser feita para o endpoint "/api/Lotes" o qual retornará a listagem atualidade de Lotes para a página de listagem.
+Ao clicar no Botão de edição de um lote, o usuário deverá ser redirecionado para página de edição. A página de edição deverá expor um formulário contendo os seguintes campos: Medicamento (Campo desabilitado), Quantidade, Data de fabricação e Data de validade. Ao alterar algum dos campos habilitados e clicar no botão de Salvar as novas informações deve ser salvas e expostas no formulário e na listagem de lotes.
 
-![image](https://github.com/user-attachments/assets/95afb500-0b42-480b-82df-1467197ff484)
-![image](https://github.com/user-attachments/assets/4c8c14c2-ad8b-4c21-bcfd-60d16a709018)
+![image](https://github.com/user-attachments/assets/ef4016cf-1540-4e30-bfe7-ca2b714a57c0)
+![image](https://github.com/user-attachments/assets/891dc513-d18b-4ee9-a607-8fc44b55071d)
+![image](https://github.com/user-attachments/assets/b0bdfa88-bdb0-46ca-916c-26272f68f647)
+![image](https://github.com/user-attachments/assets/25913b81-23ef-48c0-8d4b-ffd1a1fb9024)
+![image](https://github.com/user-attachments/assets/d874865b-ead2-4c3e-9c85-518a5784083b)
 
 #### Cadastro de Lote
 
-A página de registro deve ser acessada a partir da página de Listagem e após o usuário preencher os campos obrigatórios: Quantidade, Data de Fabricação, Data de validade e os campos não obrigatórios: Medicamento, o botão de cadastro deve ser habilitado, ao clicar no botão uma requisição do tipo POST deverá ser feita para o endpoint "/api/Lotes" com os dados do novo Lote realizando seu registro, caso a requisição seja bem sucedida uma nova requisição do tipo GET deverá ser feita para o endpoint "/api/Lotes" qua retornará a lista de Lotes atualizada para a página de listagem.
+Ao clicar no botão de Cadastrar na página de listagem de lotes o usuário deverá ser redirecionado para página de cadastro de lotes que deverá expor um formulário com os seguintes campos: Medicamento, Quantidade, Data de fabricação e Data de validade. Ao preencher os campos e clicar no botão de Cadastrar o lote deverá ser cadastrado, o formulário deverá ser limpo e o novo lote deverá ser exposto na listagem.
 
-![image](https://github.com/user-attachments/assets/ecdd89c5-c525-4ec7-af36-ce32fde5ad7f)
-![image](https://github.com/user-attachments/assets/443c38ac-8ce6-4e80-a050-bd10b761a014)
+![image](https://github.com/user-attachments/assets/b8f576e8-dc86-46b6-82a0-cef025b83c13)
+![image](https://github.com/user-attachments/assets/7944a525-0566-46a5-99f8-3b5f9baeeb25)
+![image](https://github.com/user-attachments/assets/af2ed09e-bd97-4592-a655-c035d5a23268)
+![image](https://github.com/user-attachments/assets/ef891899-f7af-4db6-84ae-84a31d54c879)
+![image](https://github.com/user-attachments/assets/f4e1f3b7-d9b5-4732-9967-d7b040f884d7)
+
 
 #### Cadastro de Usuário
 <!-- Ao fornecer um nome de usuário e senha válidos, a API retorna um código de resposta 201, indicando que a criação do usuário foi bem-sucedida, e o usuário deve ser redirecionado para a página de "Login".
