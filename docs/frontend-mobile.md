@@ -288,16 +288,18 @@ A página de registro deve ser acessada a partir da página de Listagem e após 
 ![image](https://github.com/user-attachments/assets/443c38ac-8ce6-4e80-a050-bd10b761a014)
 
 #### Cadastro de Usuário
+<!-- Ao fornecer um nome de usuário e senha válidos, a API retorna um código de resposta 201, indicando que a criação do usuário foi bem-sucedida, e o usuário deve ser redirecionado para a página de "Login".
 
-Ao fornecer um nome de usuário e senha válidos, a API retorna um código de resposta 201, indicando que a criação do usuário foi bem-sucedida, e o usuário deve ser redirecionado para a página de "Login".
+![Teste_Cadastro_Usuario](./img/mobile_criar_usuario.png) -->
 
-![Teste_Cadastro_Usuario](./img/mobile_criar_usuario.png)
+Foi realizado o teste de todos os componentes da tela para garantir que estão sendo renderizados corretamente, incluindo os textos, imagens e campos de entrada do usuário. Foi testada a funcionalidade de criação de usuário, verificando que ao fornecer um nome de usuário e senha válidos, o sistema realiza a criação da conta com sucesso, exibindo uma mensagem de confirmação e redirecionando para a tela de "Login". Também foi testada a interatividade dos botões, assegurando que respondem corretamente ao toque e executam as ações previstas.
 
 #### Autenticar Usuário
+<!-- Ao fornecer credenciais válidas (nome de usuário e senha), a API retorna um código de resposta 200, indicando que a autenticação foi bem-sucedida, e o usuário deve ser redirecionado para a página "Home". -->
 
-Ao fornecer credenciais válidas (nome de usuário e senha), a API retorna um código de resposta 200, indicando que a autenticação foi bem-sucedida, e o usuário deve ser redirecionado para a página "Home".
+<!-- ![Teste_Autenticar_Usuario](./img/mobile_autenticar_usuario.png) -->
 
-![Teste_Autenticar_Usuario](./img/mobile_autenticar_usuario.png)
+Foi realizado o teste para garantir que todos os componentes estão sendo renderizados corretamente, incluindo os textos, imagens e campos de entrada do usuário. Foi testada a navegação dos botões, verificando que ao clicar em cada um, o usuário é redirecionado para as telas apropriadas: 'Home' ao autenticar e 'Criar Conta' ao clicar em criar conta ou 'Esqueci a Senha'. Também foi testado a interatividade dos botões, que respondem corretamente ao toque.
 
 # Referências
 
