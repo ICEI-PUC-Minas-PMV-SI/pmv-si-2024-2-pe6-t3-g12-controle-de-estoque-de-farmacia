@@ -251,6 +251,16 @@ Essas etapas asseguram que a aplicação esteja corretamente implantada e pronta
 
 ## Testes
 
+### Fornecedores
+Os testes relacionados ao fluxo de fornecedores abrangem as funcionalidades de listagem, filtragem, remoção, edição e registro. O objetivo é garantir a cobertura completa desses processos, validando o correto funcionamento e a conformidade das ações implementadas. 
+![Listagem](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe6-t3-g12-controle-de-estoque-de-farmacia/blob/main/docs/img/listagemfornecedores.png?raw=true)
+
+
+#### Listagem de Fornecedores
+
+Nos testes do fluxo de fornecedores, a funcionalidade de listagem exibe as seguintes informações: **ID**, **nome fantasia**, **CNPJ**, **telefone** e **e-mail**. Esses dados são apresentados de forma clara para facilitar a visualização e o gerenciamento dos fornecedores cadastrados.
+
+
 ### Lotes
 
 Os testes relacionados ao fluxo dos Lotes abrangem as ações de listagem, filtragem, remoção, edição e registro e tem o intuito de cobrir e comprovar o funcionamento de tais funcionalidades.
