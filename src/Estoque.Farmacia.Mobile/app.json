@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Estoque.Farmacia.Mobile",
-    "slug": "Estoque.Farmacia.Mobile",
+    "slug": "estoque-farmacia-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,10 +18,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.usernexus.estoquefarmaciamobile"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "bb3bc3cd-5a4d-44c4-9b2d-441135accc91"
+      }
     }
   }
 }
