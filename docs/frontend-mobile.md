@@ -265,7 +265,6 @@ Nos testes do fluxo de fornecedores, a funcionalidade de listagem exibe as segui
 Nos testes do fluxo de fornecedores, a funcionalidade de listagem permite filtrar os fornecedores pelo **nome fantasia**, facilitando a busca específica e otimizando o gerenciamento dos registros.
 
 ![Filtro](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe6-t3-g12-controle-de-estoque-de-farmacia/blob/main/docs/img/filtrofornecedores.png?raw=true)
-
 #### Cadastro de Fornecedores
 
 Nos testes do fluxo de fornecedores, a funcionalidade de cadastro exige o preenchimento de todos os campos obrigatórios, incluindo **nome fantasia**, **CNPJ**, **telefone** e **e-mail**. O botão de confirmação do cadastro só é habilitado após a conclusão completa e correta do preenchimento dos dados, garantindo a consistência das informações registradas.
