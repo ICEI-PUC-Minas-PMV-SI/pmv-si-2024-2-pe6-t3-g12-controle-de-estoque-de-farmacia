@@ -208,46 +208,33 @@ Essas medidas visam garantir a integridade e a segurança da aplicação e dos d
 
 ## Implantação
 
-Para implantar a aplicação de controle de estoque em um ambiente de produção, siga estas etapas:
+Para rodar o projeto em sua versão estável de produção, o usuário deverá baixar o APK da aplicação e instalá-lo em seu dispositivo. Para rodar o projeto é recomendado utilizar as seguintes configurações:
 
-1. **Requisitos de Hardware e Software**:
-   - **Hardware**:
-     - CPU: Mínimo de 2 núcleos.
-     - RAM: Pelo menos 4 GB.
-     - Espaço em disco: Mínimo de 20 GB disponíveis.
-   - **Software**:
-     - Sistema Operacional: Linux (Ubuntu, CentOS) ou Windows Server.
-     - Node.js: Versão 18.x.
-     - Banco de Dados: SQL Server.
+### Requisitos do sistema
 
-2. **Configuração do Ambiente de Implantação**:
-   - Instale o Node.js e o npm no servidor.
-   - Configure um banco de dados SQL Server e crie a instância necessária.
-   - Crie um arquivo `.env` com as variáveis de ambiente necessárias, como a URL do banco de dados e credenciais.
+#### Versão Android
 
-3. **Deploy da Aplicação**:
-   - Clone o repositório da aplicação usando Git:
-     ```bash
-     git clone <URL-do-repositório>
-     cd <nome-do-repositório>
-     ```
-   - Instale as dependências:
-     ```bash
-     npm install
-     ```
-   - Compile a aplicação:
-     ```bash
-     npm run build
-     ```
-   - Inicie a aplicação:
-     ```bash
-     npm start
-     ```
+A versão mínima do Android depende do seu SDK do Expo:
 
-4. **Testes em Produção**:
-   - Após o deploy, realize testes para garantir que a aplicação funcione corretamente, verificando funcionalidades principais e a integração com o banco de dados.
+Para Expo SDK 47+: Android 5.0 (Lollipop, API 21) ou superior.
+Para Expo SDK 48+: Android 6.0 (Marshmallow, API 23) ou superior.
 
-Essas etapas asseguram que a aplicação esteja corretamente implantada e pronta para uso em um ambiente de produção.
+#### Arquitetura
+
+O APK gerado pelo Expo oferece suporte às arquiteturas ARM e ARM64. Para dispositivos baseados em x86, pode ser necessário criar um APK personalizado.
+
+#### RAM
+Pelo menos 2 GB de RAM para um desempenho fluido.
+
+#### Armazenamento
+
+Espaço de armazenamento suficiente para instalar o APK (varia com o tamanho do aplicativo, geralmente entre 50 e 200 MB).
+
+### Instalação
+
+Tendo os requisitos mínimos em seu dispositivo, baixe o APK da aplicação que está nesse diretório "/src/Estoque.Farmacia.Mobile/application-946569f1-3feb-4484-9f4a-dc63fcfc710d.apk".
+
+Com o APK baixado execute-o e a aplicação estará pronta para ser utilizada.
 
 ## Testes
 
