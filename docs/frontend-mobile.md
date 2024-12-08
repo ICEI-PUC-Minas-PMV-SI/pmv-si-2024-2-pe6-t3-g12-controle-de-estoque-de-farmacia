@@ -251,6 +251,36 @@ Essas etapas asseguram que a aplicação esteja corretamente implantada e pronta
 
 ## Testes
 
+### Fornecedores
+Os testes relacionados ao fluxo de fornecedores abrangem as funcionalidades de listagem, filtragem, remoção, edição e registro. O objetivo é garantir a cobertura completa desses processos, validando o correto funcionamento e a conformidade das ações implementadas. 
+
+#### Listagem de Fornecedores
+
+Nos testes do fluxo de fornecedores, a funcionalidade de listagem exibe as seguintes informações: **ID**, **nome fantasia**, **CNPJ**, **telefone** e **e-mail**. Esses dados são apresentados de forma clara para facilitar a visualização e o gerenciamento dos fornecedores cadastrados.
+
+![Listagem](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe6-t3-g12-controle-de-estoque-de-farmacia/blob/main/docs/img/listagemfornecedores.png?raw=true)
+
+#### Filtro de Fornecedores
+
+Nos testes do fluxo de fornecedores, a funcionalidade de listagem permite filtrar os fornecedores pelo **nome fantasia**, facilitando a busca específica e otimizando o gerenciamento dos registros.
+
+![Filtro](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe6-t3-g12-controle-de-estoque-de-farmacia/blob/main/docs/img/filtrofornecedores.png?raw=true)
+#### Cadastro de Fornecedores
+
+Nos testes do fluxo de fornecedores, a funcionalidade de cadastro exige o preenchimento de todos os campos obrigatórios, incluindo **nome fantasia**, **CNPJ**, **telefone** e **e-mail**. O botão de confirmação do cadastro só é habilitado após a conclusão completa e correta do preenchimento dos dados, garantindo a consistência das informações registradas.
+
+![Filtro](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe6-t3-g12-controle-de-estoque-de-farmacia/blob/main/docs/img/inclusaofornecedores.png?raw=true)
+
+#### Edição de Fornecedores
+Nos testes do fluxo de fornecedores, foi verificado que, ao clicar no botão de edição correspondente a um fornecedor na lista, é possível modificar os dados previamente cadastrados, como **nome fantasia**, **CNPJ**, **telefone** e **e-mail**, permitindo manter as informações atualizadas.
+
+![Filtro](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe6-t3-g12-controle-de-estoque-de-farmacia/blob/main/docs/img/edicaofornecedores.png?raw=true)
+
+#### Exclusão de Fornecedores
+Nos testes do fluxo de fornecedores, a funcionalidade de exclusão foi verificada e permite remover um fornecedor da lista ao clicar no botão de exclusão, garantindo a atualização imediata dos dados.
+
+![Filtro](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-2-pe6-t3-g12-controle-de-estoque-de-farmacia/blob/main/docs/img/exclusaofornecedores.png?raw=true)
+
 ### Lotes
 
 Os testes relacionados ao fluxo dos Lotes abrangem as ações de listagem, filtragem, remoção, edição e registro e tem o intuito de cobrir e comprovar o funcionamento de tais funcionalidades.
