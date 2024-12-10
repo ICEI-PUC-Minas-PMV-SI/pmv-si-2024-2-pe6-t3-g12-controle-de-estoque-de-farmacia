@@ -52,6 +52,14 @@ O banco de dados é composto por diversas entidades relacionadas, incluindo 'Ent
 - Next.js
 - Material-UI
 
+## Aplicação Front-end
+
+https://github.com/user-attachments/assets/7b39fae2-e2a3-458f-aba7-8c33dc0577ef
+
+## Aplicação Mobile
+
+https://github.com/user-attachments/assets/e77e2f4f-d119-44b9-9390-3b50e9bbe473
+
 ## Apresentação
 
 [Apresentacao_Final_G12.pdf](https://github.com/user-attachments/files/18069218/Apresentacao_Final_G12.pdf)
